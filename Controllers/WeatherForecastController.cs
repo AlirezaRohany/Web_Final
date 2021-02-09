@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using web_final.Models;
-using Web_Final;
+using web_final.Models.Patient;
 
 namespace web_final.Controllers
 {
@@ -45,7 +45,7 @@ namespace web_final.Controllers
         }
 
         [HttpPost("patient-login")]
-        public IActionResult SendPatienLogin(NormalUserRequest loginRequest)
+        public IActionResult SendPatienLogin(PatientRegisterRequest loginRequest)
         { 
             System.Console.WriteLine(loginRequest);
             return Ok("got you login");
