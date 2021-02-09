@@ -1,6 +1,6 @@
 using System;
 
-namespace web_final
+namespace web_final.Models
 {
     public class WeatherForecast
     {

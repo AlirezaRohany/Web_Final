@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using web_final.Models;
 
 namespace web_final.Controllers
 {
@@ -34,6 +35,12 @@ namespace web_final.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpGet("hello-amo")]
+        public IActionResult SayHello()
+        {
+            return Ok("hello");
         }
     }
 }
