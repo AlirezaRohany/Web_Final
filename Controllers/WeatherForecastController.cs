@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using web_final.Models;
+using Web_Final;
 
 namespace web_final.Controllers
 {
@@ -41,6 +42,13 @@ namespace web_final.Controllers
         public IActionResult SayHello()
         {
             return Ok("hello");
+        }
+
+        [HttpPost("patient-login")]
+        public IActionResult SendPatienLogin(NormalUserRequest loginRequest)
+        { 
+            System.Console.WriteLine(loginRequest);
+            return Ok("got you login");
         }
     }
 }
