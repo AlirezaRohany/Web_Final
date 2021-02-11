@@ -5,6 +5,12 @@
             "driver": "SQLite",
             "name": "darman-db",
             "database": "${workspaceFolder:Web_Final}/Darmankadeh.db"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:Web_Final}/Darmankadeh.db",
+            "name": "s"
         }
     ],
     "sqltools.useNodeRuntime": true

@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Web_Final.Models;
 
 namespace web_final.Migrations
 {
     [DbContext(typeof(DarmanKadehContext))]
-    partial class DarmanKadehContextModelSnapshot : ModelSnapshot
+    [Migration("20210211183233_auth-init")]
+    partial class authinit
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

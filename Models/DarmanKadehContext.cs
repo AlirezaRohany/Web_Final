@@ -1,9 +1,10 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Web_Final.Models.Patient;
+using Web_Final.Models;
 
 namespace Web_Final.Models
 {
-    public class DarmanKadehContext : DbContext
+    public class DarmanKadehContext : IdentityDbContext<ApplicationUser>
     {
         public DarmanKadehContext(DbContextOptions options) : base(options)
         {
@@ -13,6 +14,13 @@ namespace Web_Final.Models
         {
         }
 
-        public DbSet<PatientEntity> Patients { get; set; }
+        // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        // {
+        //     optionsBuilder.LogTo()
+        // }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
     }
 }
