@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "darman-db",
+            "database": "${workspaceFolder:Web_Final}/Darmankadeh.db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
